@@ -5,25 +5,18 @@ const current_url = (window.location.href);
 const url = new URL(current_url);
 const project = url.searchParams.get("project");
 const number_of_files = parseInt(url.searchParams.get("nimg"));
-console.log(project);
-console.log(number_of_files)
 
+const img_style = `style="width: 120px; height: 900px; padding-left: 10%;padding-right: 10%;"`
 
 const carrosel_active = document.querySelector(`.carousel-item`);
-carrosel_active.innerHTML = `                    <img src="./assets/images/${project}/IMG_1.png" class="img-carrosel d-block w-100" alt="...">
+carrosel_active.innerHTML = `                    <img ${img_style} src="./assets/images/${project}/IMG_1.gif" class="img-carrosel d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
-                        <h5>First slide label</h5>
-                        <p>Main Dashboard.</p>
                     </div>`;
 
 
 for(let i=2;i<=number_of_files;i++){
-    const new_html = `    <div class="carousel-item">
-        <img src="./assets/images/${project}/IMG_${i}.png" class="d-block w-100" alt="...">
-        <div class="carousel-caption d-none d-md-block">
-            <h5>Second slide label</h5>
-            <p>Some representative placeholder content for the ${i} slide.</p>
-        </div>
+    const new_html = `    <div class="carousel-item" style="background-color: black;">
+        <img ${img_style} src="./assets/images/${project}/IMG_${i}.gif" class="d-block w-100" alt="...">
     </div>`;
 
     document.querySelector(`.carousel-inner`).innerHTML+=new_html;

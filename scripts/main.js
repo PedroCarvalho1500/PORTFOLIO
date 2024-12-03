@@ -1,3 +1,26 @@
+    
+
+const certificates = [
+    {
+        title: `Bachelor's Degree in Computer Engineering`,
+        college: `National Institute of Telecommunications – INATEL`,
+        conclusion: `Concluded in 2019,`
+
+    },
+    {
+        title: `IT Technical Certificate`,
+        college: `IFSULDEMINAS – Câmpus Machado`,
+        conclusion: `Concluded in 2013,`
+    },
+    {
+        title: `English – Advanced 1 (C1) certificate by English Live. CEFR level C1.`,
+        college: `English Live`,
+        conclusion: `<a href="https://www.efset.org/cert/sjVzGx" target="_blank"> Certificate`
+    }
+]
+
+
+
 const tools_and_knowledge = [
     {        
         tool: "Postman",
@@ -34,6 +57,10 @@ const tools_and_knowledge = [
     {
         tool: `Sqlite`,
         img: `sqlite_icon.webp`
+    },
+    {
+        tool: `Javascript`,
+        img: `js_icon.webp`
     }
     ]
     
@@ -42,17 +69,19 @@ const tools_and_knowledge = [
         title: 'Soccer Players Database with Tkinter',
         url: `https://github.com/PedroCarvalho1500/estudo_tkinter/tree/master/tkinter_projeto`,
         preview: `images_soccer_project`,
-        number_of_images: 4
+        number_of_images: 2
     },
     {
         title: 'Web Blog with Flask',
         url: `https://github.com/PedroCarvalho1500/BLOG_WITH_FLASK`,
-        preview: `images_soccer_project`,
-        number_of_images: 4
+        preview: `web_blog_with_flask`,
+        number_of_images: 3
     },
     {
         title: 'Good Cafes around the World',
-        url: `https://github.com/PedroCarvalho1500/WEB_CAFE_SEARCHING`
+        url: `https://github.com/PedroCarvalho1500/WEB_CAFE_SEARCHING`,
+        preview: `cafes`,
+        number_of_images: 2
     },
     {
         title: `Playwright Projects developed through Courses`,
@@ -62,7 +91,7 @@ const tools_and_knowledge = [
         title: `Tkinter APP with Python to play BINGO`,
         url: `https://github.com/PedroCarvalho1500/BINGO_APP_TKINTER`,
         preview: `bingo_app`,
-        number_of_images: 3
+        number_of_images: 1
     },
     {
         title: `API Tests integrated with TKinter + Python`,
@@ -70,7 +99,9 @@ const tools_and_knowledge = [
     },
     {
         title: `Tkinter APP to study English`,
-        url: `https://github.com/PedroCarvalho1500/ENGLISH_APP_TKINTER`
+        url: `https://github.com/PedroCarvalho1500/ENGLISH_APP_TKINTER`,
+        preview: `english_app`,
+        number_of_images: 2
     },
     {
         title: `Amazon clone using HTML + Javascript`,
@@ -82,7 +113,14 @@ const tools_and_knowledge = [
     }
     ]
 
+    const certificateItems = document.querySelector(`.certificates`);
     const githubItems = document.querySelector(`.github_projects`);
+
+    certificates.forEach((certificate) => {
+        const new_li = document.createElement(`li`);
+        new_li.innerHTML = `${certificate.title} from ${certificate.college} - ${certificate.conclusion}`;
+        certificateItems.appendChild(new_li);
+    })
 
     github_repositories.forEach((item) => {
         const html = `<a href="${item.url}" target="_blank"><li>${item.title}</li><a href="./project_preview.html?project=${item.preview}&nimg=${item.number_of_images}" target="_blank">Project Preview</a><hr/>`;
@@ -97,4 +135,12 @@ const tools_and_knowledge = [
         new_li.innerHTML = `<img width=20px src=./assets/images/${item.img}>${item.tool}
         `;
         ulListItems.appendChild(new_li);
-    })
+    });
+
+    insertFooter();
+
+function insertFooter(){
+    document.querySelector(`.body`).innerHTML+=`  <footer>
+    <p>©2024 Pedro</p>
+  </footer>`
+}
