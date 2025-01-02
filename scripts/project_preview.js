@@ -1,6 +1,6 @@
 
 
-
+//DEPLOY
 const current_url = (window.location.href);
 const url = new URL(current_url);
 const project = url.searchParams.get("project");
