@@ -4,21 +4,30 @@ const certificates = [
     {
         title: `Bachelor's Degree in Computer Engineering`,
         college: `National Institute of Telecommunications – INATEL`,
-        conclusion: `Concluded in 2019,`
+        conclusion: `Concluded in 2019.`
 
     },
     {
         title: `IT Technical Certificate`,
         college: `IFSULDEMINAS – Câmpus Machado`,
-        conclusion: `Concluded in 2013,`
+        conclusion: `Concluded in 2013.`
     },
     {
-        title: `English – Advanced 1 (C1) certificate by English Live. CEFR level C1.`,
+        title: `English – CEFR level C1.`,
         college: `English Live`,
         conclusion: `<a href="https://www.efset.org/cert/sjVzGx" target="_blank"> Certificate`
+    },
+    {
+        title: `Volunteer Professor in IT`,
+        college: `Inatel Casa Viva`,
+        conclusion: `In 2016`
     }
 ]
 
+
+const professional_history = [
+
+]
 
 
 const tools_and_knowledge = [
@@ -113,13 +122,30 @@ const tools_and_knowledge = [
     }
     ]
 
-    const certificateItems = document.querySelector(`.certificates`);
+    const certificateItems = document.querySelector(`#certs_list`);
     const githubItems = document.querySelector(`.github_projects`);
 
     certificates.forEach((certificate) => {
-        const new_li = document.createElement(`li`);
-        new_li.innerHTML = `${certificate.title} from ${certificate.college} - ${certificate.conclusion}`;
-        certificateItems.appendChild(new_li);
+        // <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+        //   <div class="col d-flex align-items-start">
+        //     <div>
+        //       <h3 class="fs-2 text-body-emphasis">Bachelor's Degree in Computer Engineering</h3>
+        //       <p>National Institute of Telecommunications – INATEL</p>
+        //       <p> Concluded in 2019</p>
+        //     </div>
+        //   </div>
+        // </div>
+        const new_certification_html = `        <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+          <div class="col d-flex align-items-start">
+            <div>
+              <h3 class="fs-2 text-body-emphasis">${certificate.title}</h3>
+              <p>${certificate.college}</p>
+              <p> ${certificate.conclusion}</p>
+            </div>
+          </div>
+        </div>`;
+
+        certificateItems.innerHTML+=new_certification_html;
     })
 
     github_repositories.forEach((item) => {
