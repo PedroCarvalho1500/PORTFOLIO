@@ -12,10 +12,15 @@ const certificates = [
         college: `IFSULDEMINAS – Câmpus Machado`,
         conclusion: `Concluded in 2013.`
     },
+        {
+        title: `Volunteer Professor in IT`,
+        college: `Inatel Casa Viva`,
+        conclusion: `In 2016`
+    },
     {
-        title: `English – CEFR level C1.`,
-        college: `English Live`,
-        conclusion: `<a href="https://www.efset.org/cert/sjVzGx" target="_blank"> Certificate`
+        title: `PCEP – Certified Entry-Level Python Programmer`,
+        college: `OpenEDG Python Institute`,
+        conclusion: `<a href="https://www.linkedin.com/redir/redirect/?url=https%3A%2F%2Fverify.openedg.org%2F%3Fid%3DFNtk.sY8a.ai0X&urlhash=QYaY&isSdui=true&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3B%2Bc5iIfNPSQiGLgRQjj%2Fi0g%3D%3D" target="_blank"> Certificate`
     },
     {
         title: `Volunteer Professor in IT`,
