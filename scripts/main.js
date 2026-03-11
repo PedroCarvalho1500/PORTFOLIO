@@ -98,10 +98,6 @@ const tools_and_knowledge = [
         number_of_images: 2
     },
     {
-        title: `Playwright Projects developed through Courses`,
-        url: `https://github.com/PedroCarvalho1500/PLAYWRIGHT/tree/main/COURSE`
-    },
-    {
         title: `Tkinter APP with Python to play BINGO`,
         url: `https://github.com/PedroCarvalho1500/BINGO_APP_TKINTER`,
         preview: `bingo_app`,
@@ -109,7 +105,9 @@ const tools_and_knowledge = [
     },
     {
         title: `API Tests integrated with TKinter + Python`,
-        url: `https://github.com/PedroCarvalho1500/API_TESTS_TKINTER`
+        url: `https://github.com/PedroCarvalho1500/API_TESTS_TKINTER`,
+        preview: `api_tests_tkinter`,
+        number_of_images: 1
     },
     {
         title: `Tkinter APP to study English`,
@@ -119,11 +117,9 @@ const tools_and_knowledge = [
     },
     {
         title: `Amazon clone using HTML + Javascript`,
-        url: `https://github.com/PedroCarvalho1500/AMAZON_JAVASCRIPT/tree/main/JAVASCRIPT_HTML/DOM`
-    },
-    {
-        title: `Automation using Selenium with Java`,
-        url: `https://github.com/PedroCarvalho1500/teste_sicredi/tree/main/projeto_sicredi`
+        url: `https://github.com/PedroCarvalho1500/AMAZON_JAVASCRIPT/tree/main/JAVASCRIPT_HTML/DOM`,
+        preview: 'amazon_clone',
+        number_of_files: 2
     }
     ]
 
