@@ -31,7 +31,27 @@ const certificates = [
 
 
 const professional_history = [
-
+    {
+        company: `Integritas Inc`,
+        started: 'March 2023',
+        finished: '',
+        position: `Junior QA`,
+        is_current: true
+    },
+    {
+        company: `INATEL`,
+        started: 'March 2023',
+        finished: 'March 2021',
+        position: `Junior QA`,
+        is_current: true
+    },
+    {
+        company: `Riversoft`,
+        started: 'November 2019',
+        finished: 'March 2021',
+        position: `Junior QA`,
+        is_current: false
+    }
 ]
 
 
@@ -126,6 +146,23 @@ const tools_and_knowledge = [
     const certificateItems = document.querySelector(`#certs_list`);
     const githubItems = document.querySelector(`.github_projects`);
 
+    const professionalHistoryItems = document.querySelector(`.professional`);
+
+    professional_history.forEach((item) => {
+        const new_professional_history_html = `        <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+          <div class="col d-flex align-items-start">
+            <div>
+              <h3 class="fs-2 text-body-emphasis">${item.company}</h3>
+              <p>Position - ${item.position}</p>
+              <p> From ${item.started} to ${item.is_current ? 'Current' : item.finished}</p>
+            </div>
+          </div>
+        </div>`;
+
+        professionalHistoryItems.innerHTML+=new_professional_history_html;
+    });
+
+
     certificates.forEach((certificate) => {
         // <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
         //   <div class="col d-flex align-items-start">
@@ -168,6 +205,6 @@ const tools_and_knowledge = [
 
 function insertFooter(){
     document.querySelector(`.body`).innerHTML+=`  <footer>
-    <p>©2024 Pedro</p>
+    <p>©2026 Pedro</p>
   </footer>`
 }
