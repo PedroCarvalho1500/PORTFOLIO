@@ -164,15 +164,6 @@ const tools_and_knowledge = [
 
 
     certificates.forEach((certificate) => {
-        // <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-        //   <div class="col d-flex align-items-start">
-        //     <div>
-        //       <h3 class="fs-2 text-body-emphasis">Bachelor's Degree in Computer Engineering</h3>
-        //       <p>National Institute of Telecommunications – INATEL</p>
-        //       <p> Concluded in 2019</p>
-        //     </div>
-        //   </div>
-        // </div>
         const new_certification_html = `        <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
           <div class="col d-flex align-items-start">
             <div>
