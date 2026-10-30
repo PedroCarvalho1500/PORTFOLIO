@@ -35,21 +35,21 @@ const professional_history = [
         company: `CoForge`,
         started: 'March 2026',
         finished: '',
-        position: `Associate Engineer B`,
+        position: `Associate Engineer B (Senior QA)`,
         is_current: true
     },
     {
         company: `Integritas Inc`,
         started: 'March 2023',
         finished: 'March 2026',
-        position: `Junior QA`,
+        position: `Full QA`,
         is_current: false
     },
     {
         company: `INATEL`,
         started: 'March 2023',
         finished: 'March 2021',
-        position: `Junior QA`,
+        position: `Full QA`,
         is_current: false
     },
     {
