@@ -32,18 +32,25 @@ const certificates = [
 
 const professional_history = [
     {
+        company: `CoForge`,
+        started: 'March 2026',
+        finished: '',
+        position: `Associate Engineer B`,
+        is_current: true
+    },
+    {
         company: `Integritas Inc`,
         started: 'March 2023',
-        finished: '',
+        finished: 'March 2026',
         position: `Junior QA`,
-        is_current: true
+        is_current: false
     },
     {
         company: `INATEL`,
         started: 'March 2023',
         finished: 'March 2021',
         position: `Junior QA`,
-        is_current: true
+        is_current: false
     },
     {
         company: `Riversoft`,
